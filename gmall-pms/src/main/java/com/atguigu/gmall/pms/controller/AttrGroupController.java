@@ -34,6 +34,12 @@ public class AttrGroupController {
     @Autowired
     private AttrGroupService attrGroupService;
 
+    @GetMapping("/category/{cid}")
+    public ResponseVo<List<AttrGroupEntity>> queryGroupByCid(@PathVariable("cid") Long cId){
+        List<AttrGroupEntity> attrGroupList = attrGroupService.queryByCidPage(cId);
+        return ResponseVo.ok(attrGroupList);
+    }
+
     /**
      * 列表
      */
