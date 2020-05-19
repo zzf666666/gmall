@@ -1,0 +1,192 @@
+2020-05-19 20:23:33,955 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 20:23:33,962 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 20:23:47,062 INFO DEFAULT_GROUP@@pms-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:18081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 20:23:47,062 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 20:23:47,063 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 20:25:12,080 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589891092210
+
+2020-05-19 20:25:13,787 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:8888@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1589891094344
+
+2020-05-19 20:25:27,549 INFO DEFAULT_GROUP@@pms-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:18081:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 20:25:27,549 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 
+
+2020-05-19 20:25:28,796 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 20:25:28,796 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-05-19 20:25:35,649 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 20:25:35,649 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 20:25:54,838 INFO DEFAULT_GROUP@@pms-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:18081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 20:25:54,839 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 20:25:54,844 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:11:51,922 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 21:11:51,931 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 21:11:51,932 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 21:12:01,787 INFO DEFAULT_GROUP@@pms-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:18081:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 21:12:01,787 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:12:01,788 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:18:11,894 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589894272480
+
+2020-05-19 21:18:17,219 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 21:18:17,223 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:21:11,931 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589894452465
+
+2020-05-19 21:21:18,979 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 21:21:18,987 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:29:07,027 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589894929587
+
+2020-05-19 21:29:14,868 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 21:29:14,872 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 21:38:52,183 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:8888@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1589895514782
+
+2020-05-19 21:38:57,343 INFO service: DEFAULT_GROUP@@gateway {POS} {IP-ENABLED} valid: 192.168.200.1:8888@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 21:38:57,345 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 21:40:02,144 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589895585887
+
+2020-05-19 21:40:07,503 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 21:40:07,506 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 22:18:04,606 INFO DEFAULT_GROUP@@wms-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:18084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 22:18:04,606 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:23:59,671 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18084@DEFAULT@DEFAULT_GROUP@@wms-service, region: unknown, msg: client timeout after 15000, last beat: 1589898220044
+
+2020-05-19 22:24:15,069 INFO DEFAULT_GROUP@@wms-service {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:18084:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 22:24:15,069 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 
+
+2020-05-19 22:25:09,815 INFO DEFAULT_GROUP@@wms-service {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:18084:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 22:25:09,815 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:25:09,818 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:27:45,089 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18084@DEFAULT@DEFAULT_GROUP@@wms-service, region: unknown, msg: client timeout after 15000, last beat: 1589898450003
+
+2020-05-19 22:27:49,897 INFO service: DEFAULT_GROUP@@wms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18084@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 22:27:49,899 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:28:52,785 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:8888@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1589898516553
+
+2020-05-19 22:29:07,798 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 22:29:07,798 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-05-19 22:30:10,133 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18084@DEFAULT@DEFAULT_GROUP@@wms-service, region: unknown, msg: client timeout after 15000, last beat: 1589898595106
+
+2020-05-19 22:30:18,371 INFO service: DEFAULT_GROUP@@wms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18084@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 22:30:18,376 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:30:35,666 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 22:30:35,667 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:30:35,671 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:31:12,812 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:8888@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1589898655698
+
+2020-05-19 22:31:27,823 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 22:31:27,823 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-05-19 22:32:10,152 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18084@DEFAULT@DEFAULT_GROUP@@wms-service, region: unknown, msg: client timeout after 15000, last beat: 1589898713512
+
+2020-05-19 22:32:17,879 INFO service: DEFAULT_GROUP@@wms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18084@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 22:32:17,882 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:32:20,952 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 22:32:20,952 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:32:20,954 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:34:07,839 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:8888@DEFAULT@DEFAULT_GROUP@@gateway, region: unknown, msg: client timeout after 15000, last beat: 1589898831074
+
+2020-05-19 22:34:22,848 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-DEAD} cluster: DEFAULT, dead ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_false_false_DEFAULT]
+
+2020-05-19 22:34:22,848 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 
+
+2020-05-19 22:34:45,177 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18084@DEFAULT@DEFAULT_GROUP@@wms-service, region: unknown, msg: client timeout after 15000, last beat: 1589898868054
+
+2020-05-19 22:34:49,452 INFO service: DEFAULT_GROUP@@wms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18084@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 22:34:49,455 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@wms-service, ips: 192.168.200.1:18084_true,
+
+2020-05-19 22:35:01,545 INFO DEFAULT_GROUP@@gateway {SYNC} {IP-NEW} cluster: DEFAULT, new ips size: 1, content: [192.168.200.1:8888:unknown:DEFAULT_1.0_true_false_DEFAULT]
+
+2020-05-19 22:35:01,545 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:35:01,549 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@gateway, ips: 192.168.200.1:8888_true,
+
+2020-05-19 22:57:23,000 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589900223657
+
+2020-05-19 22:57:31,643 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 22:57:31,645 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:07:48,112 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589900852279
+
+2020-05-19 23:07:55,805 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:07:55,808 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:13:43,182 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589901206226
+
+2020-05-19 23:13:47,800 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:13:47,802 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:17:13,216 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589901418020
+
+2020-05-19 23:17:23,208 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:17:23,210 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:26:13,311 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589901953805
+
+2020-05-19 23:26:20,017 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:26:20,020 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:28:38,340 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589902100143
+
+2020-05-19 23:28:43,323 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:28:43,326 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+
+2020-05-19 23:35:08,405 INFO {POS} {IP-DISABLED} valid: 192.168.200.1:18081@DEFAULT@DEFAULT_GROUP@@pms-service, region: unknown, msg: client timeout after 15000, last beat: 1589902488792
+
+2020-05-19 23:35:15,693 INFO service: DEFAULT_GROUP@@pms-service {POS} {IP-ENABLED} valid: 192.168.200.1:18081@DEFAULT, region: unknown, msg: client beat ok
+
+2020-05-19 23:35:15,694 INFO [IP-UPDATED] namespace: public, service: DEFAULT_GROUP@@pms-service, ips: 192.168.200.1:18081_true,
+

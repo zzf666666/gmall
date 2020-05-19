@@ -35,6 +35,12 @@ public class AttrController {
     @Autowired
     private AttrService attrService;
 
+    @GetMapping("/category/{cid}")
+    public ResponseVo<List<AttrEntity>> querySkuAttr(@PathVariable("cid") Long cId,Integer type,Integer searchType){
+        List<AttrEntity> list = attrService.querySkuAttr(cId,type,searchType);
+        return ResponseVo.ok(list);
+    }
+
     @GetMapping("/group/{gid}")
     public ResponseVo<List<AttrEntity>> queryAttrByGroupId(@PathVariable("gid") Long gId){
         List<AttrEntity> attrList = attrService.list(new QueryWrapper<AttrEntity>().eq("group_id", gId));

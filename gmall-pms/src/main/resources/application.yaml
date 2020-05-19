@@ -31,6 +31,8 @@ spring:
     host: 192.168.137.131
 
 mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
   mapper-locations: classpath:mapper/pms/**/*.xml
   #别名扫描   设置了这个，在mapper文件中，就可以不用写全类名了，会到这个包下找
   type-aliases-package: com.atguigu.gmall.pms.entity

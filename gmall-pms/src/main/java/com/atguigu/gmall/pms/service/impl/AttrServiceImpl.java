@@ -1,6 +1,10 @@
 package com.atguigu.gmall.pms.service.impl;
 
+import com.atguigu.gmall.pms.entity.AttrGroupEntity;
+import lombok.Data;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 import java.util.Map;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
@@ -24,6 +28,24 @@ public class AttrServiceImpl extends ServiceImpl<AttrMapper, AttrEntity> impleme
         );
 
         return new PageResultVo(page);
+    }
+
+    @Override
+    public List<AttrEntity> querySkuAttr(Long cId, Integer type, Integer searchType) {
+        QueryWrapper<AttrEntity> queryWrapper = new QueryWrapper<>();
+
+        if(cId != 0){
+            queryWrapper.eq("category_id", cId);
+        }
+
+        if(type != null){
+            queryWrapper.eq("type", type);
+        }
+
+        if(searchType != null){
+            queryWrapper.eq("search_type", searchType);
+        }
+        return baseMapper.selectList(queryWrapper);
     }
 
 }

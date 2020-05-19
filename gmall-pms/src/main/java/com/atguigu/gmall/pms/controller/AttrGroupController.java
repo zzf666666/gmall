@@ -2,6 +2,10 @@ package com.atguigu.gmall.pms.controller;
 
 import java.util.List;
 
+import com.atguigu.gmall.pms.entity.AttrEntity;
+import com.atguigu.gmall.pms.service.AttrService;
+import com.atguigu.gmall.pms.vo.AttrGroupVo;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +37,12 @@ public class AttrGroupController {
 
     @Autowired
     private AttrGroupService attrGroupService;
+
+    @GetMapping("/withattrs/{cid}")
+    public ResponseVo<List<AttrGroupVo>> queryAttrByCid(@PathVariable("cid") Long cId){
+        List<AttrGroupVo> list = attrGroupService.queryByCid(cId);
+        return ResponseVo.ok(list);
+    }
 
     @GetMapping("/category/{cid}")
     public ResponseVo<List<AttrGroupEntity>> queryGroupByCid(@PathVariable("cid") Long cId){

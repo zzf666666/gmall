@@ -12,19 +12,20 @@ spring:
           uri: lb://pms-service
           predicates:
             - Path=/pms/**
-#        - id: sms
-#            uri: lb://sms-service
-#            predicates:
-#              - Path=/sms/**
-#        - id: ums
-#            uri: lb://ums-service
-#            predicates:
-#              - Path=/ums/**
-#        - id: wms
-#            uri: lb://wms-service
-#            predicates:
-#              - Path=/wms/**
-#        - id: oms
-#            uri: lb://oms-service
-#            predicates:
-#              - Path=/oms/**
+        - id: sms
+          uri: lb://sms-service
+          predicates:
+            - Path=/sms/**
+        - id: ums
+          uri: ln://ums-service
+          predicates:
+            - Path=/ums/**
+        - id: wms
+          uri: lb://wms-service
+          predicates:
+            - Path=/wms/**
+        - id: oms
+          uri: lb://oms-service
+          predicates:
+            - Path=/oms/**
+
