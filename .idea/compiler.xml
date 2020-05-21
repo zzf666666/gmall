@@ -12,6 +12,7 @@
         <module name="gmall-oms" />
         <module name="gmall-common" />
         <module name="gmall-generator" />
+        <module name="gmall-sms-interface" />
         <module name="gmall-pms" />
         <module name="gmall-gateway" />
         <module name="gmall-admin" />
@@ -26,6 +27,7 @@
       <module name="gmall-oms" target="1.8" />
       <module name="gmall-pms" target="1.8" />
       <module name="gmall-sms" target="1.8" />
+      <module name="gmall-sms-interface" target="1.8" />
       <module name="gmall-ums" target="1.8" />
       <module name="gmall-wms" target="1.8" />
     </bytecodeTargetLevel>
@@ -39,6 +41,7 @@
       <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
+      <module name="gmall-sms-interface" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />
       <module name="gmall-wms" options="-parameters" />
     </option>
