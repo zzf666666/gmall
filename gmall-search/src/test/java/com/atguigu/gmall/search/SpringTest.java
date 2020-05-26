@@ -102,6 +102,8 @@ public class SpringTest {
                             }).collect(Collectors.toList()));
                         }
 
+                        goods.setSearchAttrs(searchAttrs);
+
                         ResponseVo<List<WareSkuEntity>> wareById = gmallWmsClient.queryWareBySkuId(sku.getId());
                         List<WareSkuEntity> ward = wareById.getData();
                         if(!CollectionUtils.isEmpty(ward)){

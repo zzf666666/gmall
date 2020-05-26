@@ -41,9 +41,9 @@ public class Goods {
     private List<SearchAttrVo> searchAttrs;
 
     @Field(type = FieldType.Long)
-    private Long sales;
+    private Long sales = 0l;
     @Field(type = FieldType.Date)
     private Date createTime;
     @Field(type = FieldType.Boolean)
-    private Boolean store;
+    private Boolean store = false;
 }
