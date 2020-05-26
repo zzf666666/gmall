@@ -1,6 +1,6 @@
 package com.atguigu.gmall.pms.vo;
 
-import com.atguigu.gmall.pms.entity.SpuAttrValueEntity;
+import com.atguigu.gmall.pmsinterface.entity.SpuAttrValueEntity;
 import lombok.Data;
 import org.apache.commons.lang3.StringUtils;
 

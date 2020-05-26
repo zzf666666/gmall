@@ -1,6 +1,6 @@
 package com.atguigu.gmall.pms.mapper;
 
-import com.atguigu.gmall.pms.entity.SkuImagesEntity;
+import com.atguigu.gmall.pmsinterface.entity.SkuImagesEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

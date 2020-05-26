@@ -1,6 +1,6 @@
 package com.atguigu.gmall.pms.service.impl;
 
-import com.atguigu.gmall.pms.entity.*;
+import com.atguigu.gmall.pmsinterface.entity.*;
 import com.atguigu.gmall.pms.feign.SmsClient;
 import com.atguigu.gmall.pms.mapper.SkuMapper;
 import com.atguigu.gmall.pms.mapper.SpuDescMapper;

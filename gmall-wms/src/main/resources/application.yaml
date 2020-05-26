@@ -29,7 +29,7 @@ feign:
     enabled: true
 mybatis-plus:
   mapper-locations: classpath:mapper/wms/**/*.xml
-  type-aliases-package: com.atguigu.gmall.wms.entity
+  type-aliases-package: com.atguigu.gamll.wmsinterface.entity
   global-config:
     db-config:
       id-type: auto

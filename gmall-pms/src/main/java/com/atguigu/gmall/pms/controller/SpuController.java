@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atguigu.gmall.pms.entity.SpuEntity;
+import com.atguigu.gmall.pmsinterface.entity.SpuEntity;
 import com.atguigu.gmall.pms.service.SpuService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.ResponseVo;
@@ -41,6 +40,14 @@ public class SpuController {
                                         PageParamVo pageParamVo){
         PageResultVo pageResultVo = spuService.querySpuInfo(categoryId,pageParamVo);
         return ResponseVo.ok(pageResultVo);
+    }
+
+    @PostMapping("/page")
+    @ApiOperation("分页查询")
+    public ResponseVo<List<SpuEntity>> queryPage(@RequestBody PageParamVo paramVo){
+        PageResultVo pageResultVo = spuService.queryPage(paramVo);
+
+        return ResponseVo.ok((List<SpuEntity>)pageResultVo.getList());
     }
 
     /**

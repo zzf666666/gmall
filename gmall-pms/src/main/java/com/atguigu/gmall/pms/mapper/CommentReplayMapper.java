@@ -1,6 +1,6 @@
 package com.atguigu.gmall.pms.mapper;
 
-import com.atguigu.gmall.pms.entity.CommentReplayEntity;
+import com.atguigu.gmall.pmsinterface.entity.CommentReplayEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

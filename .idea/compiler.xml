@@ -11,7 +11,10 @@
         <module name="gmall-sms" />
         <module name="gmall-oms" />
         <module name="gmall-common" />
+        <module name="gmall-pms-interface" />
+        <module name="gmall-wms-interface" />
         <module name="gmall-generator" />
+        <module name="gmall-search" />
         <module name="gmall-sms-interface" />
         <module name="gmall-pms" />
         <module name="gmall-gateway" />
@@ -26,10 +29,13 @@
       <module name="gmall-generator" target="1.8" />
       <module name="gmall-oms" target="1.8" />
       <module name="gmall-pms" target="1.8" />
+      <module name="gmall-pms-interface" target="1.8" />
+      <module name="gmall-search" target="1.8" />
       <module name="gmall-sms" target="1.8" />
       <module name="gmall-sms-interface" target="1.8" />
       <module name="gmall-ums" target="1.8" />
       <module name="gmall-wms" target="1.8" />
+      <module name="gmall-wms-interface" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -40,10 +46,13 @@
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
+      <module name="gmall-pms-interface" options="-parameters" />
+      <module name="gmall-search" options="-parameters" />
       <module name="gmall-sms" options="-parameters" />
       <module name="gmall-sms-interface" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />
       <module name="gmall-wms" options="-parameters" />
+      <module name="gmall-wms-interface" options="-parameters" />
     </option>
   </component>
 </project>

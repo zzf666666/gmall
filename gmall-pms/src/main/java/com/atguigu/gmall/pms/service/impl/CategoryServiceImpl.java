@@ -1,6 +1,5 @@
 package com.atguigu.gmall.pms.service.impl;
 
-import com.atguigu.gmall.pms.service.AttrService;
 import com.atguigu.gmall.pms.service.CategoryService;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +10,7 @@ import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
 
 import com.atguigu.gmall.pms.mapper.CategoryMapper;
-import com.atguigu.gmall.pms.entity.CategoryEntity;
+import com.atguigu.gmall.pmsinterface.entity.CategoryEntity;
 
 import java.util.List;
 

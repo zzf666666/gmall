@@ -10,10 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.atguigu.gmall.pms.entity.SpuAttrValueEntity;
+import com.atguigu.gmall.pmsinterface.entity.SpuAttrValueEntity;
 import com.atguigu.gmall.pms.service.SpuAttrValueService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.ResponseVo;
@@ -43,6 +42,12 @@ public class SpuAttrValueController {
         PageResultVo pageResultVo = spuAttrValueService.queryPage(paramVo);
 
         return ResponseVo.ok(pageResultVo);
+    }
+
+    @GetMapping("/spu/{spuId}")
+    public ResponseVo<List<SpuAttrValueEntity>> querySpuAttrValuesBySpuId(@PathVariable("spuId")Long spuId){
+        List<SpuAttrValueEntity> list = spuAttrValueService.querySpuAttrValuesBySpuId(spuId);
+        return ResponseVo.ok(list);
     }
 
 
