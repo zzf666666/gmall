@@ -24,4 +24,6 @@ spring:
   elasticsearch:
     rest:
       uris: 47.105.51.163:9200
+  jackson:
+    default-property-inclusion: non_null
 
