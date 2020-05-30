@@ -63,7 +63,7 @@ public class SpringTest {
                         goods.setPrice(sku.getPrice());
                         goods.setTitle(sku.getTitle());
                         goods.setSubTitle(sku.getSubtitle());
-                        goods.setDefaultIamge(sku.getDefaultImage());
+                        goods.setDefaultImage(sku.getDefaultImage());
 
                         ResponseVo<BrandEntity> brandById = gmallPmsClient.queryBrandById(sku.getBrandId());
                         BrandEntity brand = brandById.getData();

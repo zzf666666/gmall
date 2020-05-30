@@ -10,9 +10,9 @@ import java.util.List;
 @Data
 public class SearchResponseVo {
 
-    private List<BrandEntity> brand;
-    private List<CategoryEntity> category;
-    private List<SearchResposneAttrVo> filter;
+    private List<BrandEntity> brands;
+    private List<CategoryEntity> categories;
+    private List<SearchResposneAttrVo> filters;
 
     private Integer pageNum;
     private Integer pageSize;

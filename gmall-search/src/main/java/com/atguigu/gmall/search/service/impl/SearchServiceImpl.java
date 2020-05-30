@@ -107,7 +107,7 @@ public class SearchServiceImpl implements SearchService {
                 return brand;
             }).collect(Collectors.toList());
 
-            searchResponseVo.setBrand(brandList);
+            searchResponseVo.setBrands(brandList);
         }
 
         ParsedNested attrAgg = (ParsedNested)aggregationMap.get("attrAgg");
@@ -129,12 +129,12 @@ public class SearchServiceImpl implements SearchService {
                 List<? extends Terms.Bucket> attrValues = attrValueAgg.getBuckets();
                 List<String> attrValueList = attrValues.stream().map(Terms.Bucket::getKeyAsString).collect(Collectors.toList());
 
-                attrVo.setAttrValue(attrValueList);
+                attrVo.setAttrValues(attrValueList);
 
                 return attrVo;
             }).collect(Collectors.toList());
 
-            searchResponseVo.setFilter(attrList);
+            searchResponseVo.setFilters(attrList);
         }
 
         ParsedLongTerms categoryIdAgg = (ParsedLongTerms)aggregationMap.get("categoryIdAgg");
@@ -153,7 +153,7 @@ public class SearchServiceImpl implements SearchService {
                 return categoryEntity;
             }).collect(Collectors.toList());
 
-            searchResponseVo.setCategory(categoryList);
+            searchResponseVo.setCategories(categoryList);
         }
 
         return searchResponseVo;
@@ -174,8 +174,8 @@ public class SearchServiceImpl implements SearchService {
             boolQueryBuilder.filter(QueryBuilders.termsQuery("brandId", searchParam.getBrandId()));
         }
 
-        if(searchParam.getCategoryId() != null){
-            boolQueryBuilder.filter(QueryBuilders.termQuery("categoryId", searchParam.getCategoryId()));
+        if(searchParam.getCid() != null){
+            boolQueryBuilder.filter(QueryBuilders.termQuery("categoryId", searchParam.getCid()));
         }
 
         List<String> props = searchParam.getProps();
@@ -224,6 +224,7 @@ public class SearchServiceImpl implements SearchService {
 
         Integer pageNum = searchParam.getPageNum();
         Integer pageSize = searchParam.getPageSize();
+
         sourceBuilder.from((pageNum - 1) * pageSize);
         sourceBuilder.size(pageSize);
 
@@ -241,7 +242,7 @@ public class SearchServiceImpl implements SearchService {
                                                     .subAggregation(AggregationBuilders.terms("attrNameAgg").field("searchAttrs.attrName"))
                                                     .subAggregation(AggregationBuilders.terms("attrValueAgg").field("searchAttrs.attrValue"))));
 
-        sourceBuilder.fetchSource(new String[]{"skuId","price","subTitle","title","defaultIamge"},null);
+        sourceBuilder.fetchSource(new String[]{"skuId","price","subTitle","title","defaultImage"},null);
         System.out.println(sourceBuilder.toString());
         return  sourceBuilder;
     }

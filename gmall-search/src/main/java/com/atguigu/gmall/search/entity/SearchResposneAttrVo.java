@@ -9,5 +9,5 @@ public class SearchResposneAttrVo {
 
     private Integer attrId;
     private String attrName;
-    private List<String> attrValue;
+    private List<String> attrValues;
 }

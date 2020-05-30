@@ -23,7 +23,7 @@ public class Goods {
     @Field(type = FieldType.Keyword,index = false)
     private String subTitle;
     @Field(type = FieldType.Keyword,index = false)
-    private String defaultIamge;
+    private String defaultImage;
 
     @Field(type = FieldType.Long)
     private Long brandId;

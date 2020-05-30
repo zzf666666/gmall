@@ -14,7 +14,7 @@ public class SearchParam {
 
     private String keyword;
     private List<Long> brandId;
-    private Long categoryId;
+    private Long cid;
     // 规格参数过滤条件props=5:128G-256G&props=4:8G-12G
     // ["5:128G-256G", "4:8G-12G"]
     private List<String> props;
@@ -24,7 +24,7 @@ public class SearchParam {
     private Integer priceFrom;
     private Integer priceTo;
 
-    private Integer pageNum;
+    private Integer pageNum = 1;
     private final Integer pageSize = 20;
 
     // 是否有货
