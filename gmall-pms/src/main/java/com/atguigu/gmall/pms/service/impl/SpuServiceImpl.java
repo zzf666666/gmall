@@ -9,8 +9,9 @@ import com.atguigu.gmall.pms.vo.SkuVo;
 import com.atguigu.gmall.pms.vo.SpuAttrValueVo;
 import com.atguigu.gmall.pms.vo.SpuVo;
 import com.atguigu.gmall.smsinterface.vo.SkuSaleVo;
-import io.seata.spring.annotation.GlobalTransactional;
+//import io.seata.spring.annotation.GlobalTransactional;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -77,7 +78,10 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, SpuEntity> implements
     @Autowired
     private SmsClient smsClient;
 
-    @GlobalTransactional
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+
+//    @GlobalTransactional
     @Override
     public void bigSave(SpuVo spuVo) {
         spuVo.setCreateTime(new Date());
@@ -144,6 +148,7 @@ public class SpuServiceImpl extends ServiceImpl<SpuMapper, SpuEntity> implements
 
             });
         }
+        rabbitTemplate.convertAndSend("GMALL_ITEM_EXCHANGE","item.insert",spuId);
     }
 
 }

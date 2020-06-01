@@ -28,3 +28,12 @@ spring:
     default-property-inclusion: non_null
   thymeleaf:
     cache: false
+  rabbitmq:
+    host: 47.105.51.163
+    username: mj
+    password: majie123
+    virtual-host: /mj
+    listener:
+      simple:
+        acknowledge-mode: manual
+        prefetch: 1

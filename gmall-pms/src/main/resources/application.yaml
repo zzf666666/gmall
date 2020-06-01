@@ -29,10 +29,20 @@ spring:
   redis:
     port: 6379
     host: 192.168.137.131
+  rabbitmq:
+    host: 47.105.51.163
+    username: mj
+    password: majie123
+    virtual-host: /mj
+    listener:
+      simple:
+        prefetch: 1
+    publisher-confirm-type: SIMPLE
+    publisher-returns: true
 
 mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
+ # configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
   mapper-locations: classpath:mapper/pms/**/*.xml
   #别名扫描   设置了这个，在mapper文件中，就可以不用写全类名了，会到这个包下找
   type-aliases-package: com.atguigu.gmall.pmsinterface.entity

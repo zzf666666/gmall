@@ -26,4 +26,5 @@ public class SearchController {
         map.put("searchParam",searchParam);
         return "search";
     }
+
 }
