@@ -8,4 +8,6 @@ public interface IndexService {
     List<CategoryEntity> queryLvl1Categories();
 
     List<CategoryEntity> queryLvl2CategoriesWithSubs(Long pid);
+
+    void test();
 }

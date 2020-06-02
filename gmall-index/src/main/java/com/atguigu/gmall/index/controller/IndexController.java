@@ -31,4 +31,10 @@ public class IndexController {
         List<CategoryEntity> categories = indexService.queryLvl2CategoriesWithSubs(pid);
         return ResponseVo.ok(categories);
     }
+
+    @GetMapping("/index/test")
+    @ResponseBody
+    public void test(){
+        indexService.test();
+    }
 }
