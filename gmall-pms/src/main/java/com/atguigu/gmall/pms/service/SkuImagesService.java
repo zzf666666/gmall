@@ -5,6 +5,8 @@ import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.pmsinterface.entity.SkuImagesEntity;
 
+import java.util.List;
+
 /**
  * sku图片
  *
@@ -15,5 +17,7 @@ import com.atguigu.gmall.pmsinterface.entity.SkuImagesEntity;
 public interface SkuImagesService extends IService<SkuImagesEntity> {
 
     PageResultVo queryPage(PageParamVo paramVo);
+
+    List<SkuImagesEntity> queryImagesBySkuId(Long skuId);
 }
 

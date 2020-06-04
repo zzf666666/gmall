@@ -5,4 +5,10 @@
     <select id="querySpuAttrValuesBySpuId" resultType="SpuAttrValueEntity">
         SELECT a.* FROM pms_spu_attr_value a JOIN pms_attr b ON a.`attr_id`=b.`id` WHERE a.spu_id=#{spuId} AND b.search_type=1;
     </select>
+
+
+    <select id="querySpuAttrValuesBySpuIdAndGId"
+            resultType="com.atguigu.gmall.pmsinterface.entity.SpuAttrValueEntity">
+        select b.* from pms_attr a INNER JOIN pms_spu_attr_value b on a.id=b.attr_id where b.spu_id=#{spuId} and a.group_id=#{groupId}
+    </select>
 </mapper>

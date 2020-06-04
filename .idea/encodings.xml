@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/gmall-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-generator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-index/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-item/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-oms/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-pms-interface/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gmall-pms/src/main/java" charset="UTF-8" />

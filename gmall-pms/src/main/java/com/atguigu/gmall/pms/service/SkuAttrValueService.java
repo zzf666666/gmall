@@ -1,6 +1,6 @@
 package com.atguigu.gmall.pms.service;
 
-import com.atguigu.gmall.pmsinterface.entity.SpuAttrValueEntity;
+import com.atguigu.gmall.pmsinterface.vo.SaleAttrValueVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
@@ -21,5 +21,9 @@ public interface SkuAttrValueService extends IService<SkuAttrValueEntity> {
 
 
     List<SkuAttrValueEntity> querySkuAttrValuesBySkuId(Long skuId);
+
+    List<SaleAttrValueVo> querySaleAttrValuesBySpuId(Long spuId);
+
+    String querySkuJsonsBySpuId(Long spuId);
 }
 

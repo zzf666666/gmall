@@ -12,6 +12,7 @@ import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.pms.mapper.CategoryMapper;
 import com.atguigu.gmall.pmsinterface.entity.CategoryEntity;
 
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -42,5 +43,18 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, CategoryEnt
     @Override
     public List<CategoryEntity> queryCategoriesWithSubByPid(Long pid) {
         return baseMapper.queryCategoriesWithSubByPid(pid);
+    }
+
+    @Override
+    public List<CategoryEntity> queryCategoriesByCid3(Long cid3) {
+        CategoryEntity category3 = baseMapper.selectById(cid3);
+        Long cid2 = category3.getParentId();
+
+        CategoryEntity category2 = baseMapper.selectById(cid2);
+        Long cid1 = category2.getParentId();
+
+        CategoryEntity category1 = baseMapper.selectById(cid1);
+
+        return Arrays.asList(category1,category2,category3);
     }
 }

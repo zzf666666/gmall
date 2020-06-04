@@ -4,15 +4,11 @@ import java.util.List;
 
 import com.atguigu.gmall.pmsinterface.entity.AttrEntity;
 import com.atguigu.gmall.pms.vo.AttrGroupVo;
+import com.atguigu.gmall.pmsinterface.vo.ItemGroupVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.atguigu.gmall.pmsinterface.entity.AttrGroupEntity;
 import com.atguigu.gmall.pms.service.AttrGroupService;
@@ -34,6 +30,16 @@ public class AttrGroupController {
 
     @Autowired
     private AttrGroupService attrGroupService;
+
+    @GetMapping("item/group")
+    public ResponseVo<List<ItemGroupVo>> queryItemGroupVoByCidAndSpuIdAndSkuId(
+            @RequestParam("cid")Long cid,
+            @RequestParam("spuId")Long spuId,
+            @RequestParam("skuId")Long skuId
+    ){
+        List<ItemGroupVo> itemGroupVo = attrGroupService.queryItemGroupVoByCidAndSpuIdAndSkuId(cid,spuId,skuId);
+        return ResponseVo.ok(itemGroupVo);
+    }
 
     @GetMapping("/withattrs/{cid}")
     public ResponseVo<List<AttrGroupVo>> queryAttrByCid(@PathVariable("cid") Long cId){

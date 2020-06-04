@@ -40,4 +40,8 @@ spring:
           uri: lb://index-service
           predicates:
             - Path=/index/**
+        - id: item
+          uri: lb://item-service
+          predicates:
+            - Path=/item/**
 
