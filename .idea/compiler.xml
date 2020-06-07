@@ -20,12 +20,15 @@
         <module name="gmall-sms-interface" />
         <module name="gmall-index" />
         <module name="gmall-wms-interface" />
+        <module name="gmall-ums-interface" />
+        <module name="gmall-auth" />
         <module name="gmall-search" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8">
       <module name="gmall" target="1.8" />
       <module name="gmall-admin" target="1.8" />
+      <module name="gmall-auth" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-gateway" target="1.8" />
       <module name="gmall-generator" target="1.8" />
@@ -38,6 +41,7 @@
       <module name="gmall-sms" target="1.8" />
       <module name="gmall-sms-interface" target="1.8" />
       <module name="gmall-ums" target="1.8" />
+      <module name="gmall-ums-interface" target="1.8" />
       <module name="gmall-wms" target="1.8" />
       <module name="gmall-wms-interface" target="1.8" />
     </bytecodeTargetLevel>
@@ -45,6 +49,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gmall-admin" options="-parameters" />
+      <module name="gmall-auth" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
@@ -57,6 +62,7 @@
       <module name="gmall-sms" options="-parameters" />
       <module name="gmall-sms-interface" options="-parameters" />
       <module name="gmall-ums" options="-parameters" />
+      <module name="gmall-ums-interface" options="-parameters" />
       <module name="gmall-wms" options="-parameters" />
       <module name="gmall-wms-interface" options="-parameters" />
     </option>

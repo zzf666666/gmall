@@ -33,7 +33,7 @@ spring:
 mybatis-plus:
   mapper-locations: classpath:mapper/ums/**/*.xml
   #别名扫描   设置了这个，在mapper文件中，就可以不用写全类名了，会到这个包下找
-  type-aliases-package: com.atguigu.gmall.ums.entity
+  type-aliases-package: com.atguigu.gmall.umsinterface.entity
   global-config:
     db-config:
       id-type: auto

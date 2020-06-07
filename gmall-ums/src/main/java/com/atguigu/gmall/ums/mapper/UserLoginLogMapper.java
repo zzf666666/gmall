@@ -1,6 +1,6 @@
 package com.atguigu.gmall.ums.mapper;
 
-import com.atguigu.gmall.ums.entity.UserLoginLogEntity;
+import com.atguigu.gmall.umsinterface.entity.UserLoginLogEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

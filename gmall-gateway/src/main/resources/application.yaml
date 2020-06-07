@@ -43,5 +43,9 @@ spring:
         - id: item
           uri: lb://item-service
           predicates:
-            - Path=/item/**
+            - Host=item.gmall.com
+        - id: sso
+          uri: lb://auth-service
+          predicates:
+            - Host=sso.gmall.com
 

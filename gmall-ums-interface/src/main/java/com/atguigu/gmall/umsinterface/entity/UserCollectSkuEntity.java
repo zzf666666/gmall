@@ -1,4 +1,4 @@
-package com.atguigu.gmall.ums.entity;
+package com.atguigu.gmall.umsinterface.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -8,15 +8,15 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 购物积分记录表
+ * 关注商品表
  * 
  * @author mj
  * @email mj@110.com
  * @date 2020-05-17 16:26:32
  */
 @Data
-@TableName("ums_integration_history")
-public class IntegrationHistoryEntity implements Serializable {
+@TableName("ums_user_collect_sku")
+public class UserCollectSkuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -25,24 +25,24 @@ public class IntegrationHistoryEntity implements Serializable {
 	@TableId
 	private Long id;
 	/**
-	 * member_id
+	 * 用户id
 	 */
 	private Long userId;
+	/**
+	 * sku_id
+	 */
+	private Long skuId;
+	/**
+	 * sku标题
+	 */
+	private String skuTitle;
+	/**
+	 * sku默认图片
+	 */
+	private String skuImage;
 	/**
 	 * 创建时间
 	 */
 	private Date createTime;
-	/**
-	 * 变动数量
-	 */
-	private Integer count;
-	/**
-	 * 备注
-	 */
-	private String remark;
-	/**
-	 * 来源
-	 */
-	private Integer sourceType;
 
 }

@@ -23,3 +23,9 @@ spring:
       enabled: true
   thymeleaf:
     cache: false
+
+#threadPool:
+#  coreSize: 100
+#  maxSize: 200
+#  timeout: 60
+#  blockingSize: 1000

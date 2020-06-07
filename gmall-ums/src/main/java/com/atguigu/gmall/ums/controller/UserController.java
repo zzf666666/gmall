@@ -5,15 +5,9 @@ import java.util.List;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import com.atguigu.gmall.ums.entity.UserEntity;
+import com.atguigu.gmall.umsinterface.entity.UserEntity;
 import com.atguigu.gmall.ums.service.UserService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.ResponseVo;
@@ -33,6 +27,26 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @GetMapping("/check/{data}/{type}")
+    public ResponseVo<Boolean> check(@PathVariable("data") String data,@PathVariable("type") Integer type){
+        Boolean b = userService.check(data,type);
+        return ResponseVo.ok(b);
+    }
+
+    @PostMapping("/register")
+    public ResponseVo<Object> register(UserEntity user,String code){
+
+        userService.register(user,code);
+
+        return ResponseVo.ok();
+    }
+
+    @GetMapping("/query")
+    public ResponseVo<UserEntity> query(@RequestParam("username") String username, @RequestParam("password")String password){
+        UserEntity userEntity = userService.queryByUsernameAndpassword(username, password);
+        return ResponseVo.ok(userEntity);
+    }
 
     /**
      * 列表

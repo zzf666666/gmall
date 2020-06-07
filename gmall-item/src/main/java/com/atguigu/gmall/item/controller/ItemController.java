@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Map;
+
 @Controller
 public class ItemController {
 
@@ -16,9 +18,11 @@ public class ItemController {
     private ItemService itemService;
 
     @GetMapping("item/{skuId}")
-    @ResponseBody
-    public ResponseVo<ItemVo> item(@PathVariable("skuId") Long skuId){
+    public String item(@PathVariable("skuId") Long skuId, Map<String,ItemVo> map){
         ItemVo itemVo = itemService.queryItemBySkuId(skuId);
-        return ResponseVo.ok(itemVo);
+
+        map.put("itemVo",itemVo);
+
+        return "item";
     }
 }

@@ -35,7 +35,7 @@ public class ItemVo {
 
     private Boolean store = false;
 
-    private List<SaleAttrValueVo> skuAttrs;
+    private List<SaleAttrValueVo> saleAttrs;
 
     // 当前sku的销售属性 {8: 黑色, 9: 12G, 10: 256G}
     private Map<Long,String> saleAttr;
