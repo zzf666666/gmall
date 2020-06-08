@@ -44,3 +44,4 @@ auth:
   jwt:
     pubKeyPath: F:\ideaproject\guli_gmall\rsa\rsa.pub
     cookieName: GMALL-TOKEN
+    userKey: userKey

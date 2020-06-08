@@ -16,6 +16,7 @@ public class JwtProperties {
 
     private String pubKeyPath;
     private String cookieName;
+    private String userKey;
 
 
     private PublicKey publicKey;
