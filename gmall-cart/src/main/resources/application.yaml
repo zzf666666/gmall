@@ -1,0 +1,46 @@
+server:
+  port: 18089
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:8080
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    base-url: localhost:9411
+    sender:
+      type: web
+    discovery-client-enabled: false
+  datasource:
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_cart
+    username: root
+  feign:
+    sentinel:
+      enabled: true
+  redis:
+    port: 6379
+    host: 192.168.137.131
+
+mybatis-plus:
+ # configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl #mybatis日志
+  mapper-locations: classpath:mapper/cart/**/*.xml
+  #别名扫描   设置了这个，在mapper文件中，就可以不用写全类名了，会到这个包下找
+  type-aliases-package: com.atguigu.gmall.cart.mapper
+  global-config:
+    db-config:
+      id-type: auto
+
+auth:
+  jwt:
+    pubKeyPath: F:\ideaproject\guli_gmall\rsa\rsa.pub
+    cookieName: GMALL-TOKEN

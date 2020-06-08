@@ -21,6 +21,7 @@
         <module name="gmall-index" />
         <module name="gmall-wms-interface" />
         <module name="gmall-ums-interface" />
+        <module name="gmall-cart" />
         <module name="gmall-auth" />
         <module name="gmall-search" />
       </profile>
@@ -29,6 +30,7 @@
       <module name="gmall" target="1.8" />
       <module name="gmall-admin" target="1.8" />
       <module name="gmall-auth" target="1.8" />
+      <module name="gmall-cart" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-gateway" target="1.8" />
       <module name="gmall-generator" target="1.8" />
@@ -50,6 +52,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="gmall-admin" options="-parameters" />
       <module name="gmall-auth" options="-parameters" />
+      <module name="gmall-cart" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
