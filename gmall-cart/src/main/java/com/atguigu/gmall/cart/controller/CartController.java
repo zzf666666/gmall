@@ -1,5 +1,6 @@
 package com.atguigu.gmall.cart.controller;
 
+import com.atguigu.gmall.cart.entity.Cart;
 import com.atguigu.gmall.cart.entity.UserInfo;
 import com.atguigu.gmall.cart.interceptor.LoginInterceptor;
 import com.atguigu.gmall.cart.service.CartService;
@@ -35,4 +36,20 @@ public class CartController {
 
         return "cart";
     }
+
+    @GetMapping("addCart")
+    public String addCart(Cart cart){
+
+        cartService.addCart(cart);
+
+        return "redirect:http://cart.gmall.com/cart?skuId=" + cart.getSkuId();
+    }
+
+    @GetMapping("cart")
+    public String cart(Integer skuId){
+        Cart cart = cartService.cart(skuId);
+
+        return "addCart";
+    }
+
 }
