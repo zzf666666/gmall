@@ -54,7 +54,7 @@
 								<li class="yui3-u-6-24">
 									<div class="good-item">
 										<div class="item-img">
-											<img :src="cart.image" width="80" height="60" />
+											<img :src="cart.defaultImage" width="80" height="60" />
 										</div>
 										<div class="item-msg">{{cart.title}}</div>
 									</div>
@@ -280,58 +280,60 @@
 			$("input[name='chk_list']").prop("checked", $(this).prop("checked"));
 		})
 	</script>
-	<script th:inline="javascript">
-		new Vue({
-			el: '#app',
-			data: {
-				carts: [[${carts}]],
-				discount: 0
-			},
-			mounted(){
-				this.carts.forEach(cart => cart.saleAttrs = JSON.parse(cart.saleAttrs));
-			},
-			computed: {
-				totalCount(){
-					return this.carts.reduce((a, b) => a + b.count, 0)
-				},
-				totalMoney(){
-					return this.carts.reduce((a, b) => a + b.count * b.price, 0)
-				}
-			},
-			methods: {
-				incr(cart){
-					let count = cart.count + 1;
-					axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: count}).then(({data})=>{
-						if (data.code === 0) {
-							cart.count++;
-						}
-					})
-				},
-				decr(cart){
-					let count = cart.count - 1;
-					axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: count}).then(({data})=>{
-						if (data.code === 0) {
-							cart.count--;
-						}
-					})
-				},
-				changeNum(cart){
-					axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: cart.count})
-				},
-				check(cart){
-					let check = cart.check;
-					axios.post('http://cart.gmall.com/updateStatus', {skuId: cart.skuId, check: !check})
-				},
-				deleteCart(index){
-					axios.post('http://cart.gmall.com/deleteCart?skuId=' + this.carts[index].skuId).then(({data})=>{
-						if (data.code === 0) {
-							this.carts.splice(index, 1);
-						}
-					})
-				}
-			}
-		})
-	</script>
+    <script th:inline="javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                carts: [[${carts}]],
+                discount: 0
+            },
+            mounted(){
+                this.carts.forEach(cart => cart.saleAttrs = JSON.parse(cart.saleAttrs));
+            },
+            computed: {
+                totalCount(){
+                    return this.carts.reduce((a, b) => parseInt(a) + parseInt(b.count), 0)
+                },
+                totalMoney(){
+                    return this.carts.reduce((a, b) => a + b.count * b.price, 0)
+                }
+            },
+            methods: {
+                incr(cart){
+                    let count = cart.count + 1;
+                    axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: count}).then(({data})=>{
+                        if (data.code === 0) {
+                            cart.count++;
+                        }
+                    })
+                },
+                decr(cart){
+                    let count = cart.count - 1;
+                    axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: count}).then(({data})=>{
+                        if (data.code === 0) {
+                            cart.count--;
+                        }
+                    })
+                },
+                changeNum(cart){
+                    axios.post('http://cart.gmall.com/updateNum', {skuId: cart.skuId, count: cart.count})
+                },
+                check(cart){
+                    if(cart.check != null){
+                        let check = cart.check;
+                        axios.post('http://cart.gmall.com/updateStatus', {skuId: cart.skuId, check: !check})
+                    }
+                },
+                deleteCart(index){
+                    axios.post('http://cart.gmall.com/deleteCart?skuId=' + this.carts[index].skuId).then(({data})=>{
+                        if (data.code === 0) {
+                            this.carts.splice(index, 1);
+                        }
+                    })
+                }
+            }
+        })
+    </script>
 
 </body>
 

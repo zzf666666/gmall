@@ -12,6 +12,7 @@
         <module name="gmall-generator" />
         <module name="gmall-sms" />
         <module name="gmall-ums" />
+        <module name="gmall-order" />
         <module name="gmall-wms" />
         <module name="gmall-admin" />
         <module name="gmall-pms-interface" />
@@ -19,6 +20,7 @@
         <module name="gmall-gateway" />
         <module name="gmall-sms-interface" />
         <module name="gmall-index" />
+        <module name="gmall-cart-interface" />
         <module name="gmall-wms-interface" />
         <module name="gmall-ums-interface" />
         <module name="gmall-cart" />
@@ -31,12 +33,14 @@
       <module name="gmall-admin" target="1.8" />
       <module name="gmall-auth" target="1.8" />
       <module name="gmall-cart" target="1.8" />
+      <module name="gmall-cart-interface" target="1.8" />
       <module name="gmall-common" target="1.8" />
       <module name="gmall-gateway" target="1.8" />
       <module name="gmall-generator" target="1.8" />
       <module name="gmall-index" target="1.8" />
       <module name="gmall-item" target="1.8" />
       <module name="gmall-oms" target="1.8" />
+      <module name="gmall-order" target="1.8" />
       <module name="gmall-pms" target="1.8" />
       <module name="gmall-pms-interface" target="1.8" />
       <module name="gmall-search" target="1.8" />
@@ -53,12 +57,14 @@
       <module name="gmall-admin" options="-parameters" />
       <module name="gmall-auth" options="-parameters" />
       <module name="gmall-cart" options="-parameters" />
+      <module name="gmall-cart-interface" options="-parameters" />
       <module name="gmall-common" options="-parameters" />
       <module name="gmall-gateway" options="-parameters" />
       <module name="gmall-generator" options="-parameters" />
       <module name="gmall-index" options="-parameters" />
       <module name="gmall-item" options="-parameters" />
       <module name="gmall-oms" options="-parameters" />
+      <module name="gmall-order" options="-parameters" />
       <module name="gmall-pms" options="-parameters" />
       <module name="gmall-pms-interface" options="-parameters" />
       <module name="gmall-search" options="-parameters" />

@@ -29,6 +29,30 @@ spring:
   redis:
     port: 6379
     host: 192.168.137.131
+  task:
+    execution:
+      thread-name-prefix: cart-task-
+      pool:
+        core-size: 80
+        max-size: 200
+        keep-alive: 90s
+        queue-capacity: 1000
+        # 是否允许连接超时不关闭
+        allow-core-thread-timeout: true
+      shutdown:
+        # 关闭之前，是否等待子任务完成
+        await-termination: true
+        # 等待子任务完成的时间
+        await-termination-period: 90
+  rabbitmq:
+    host: 47.105.51.163
+    username: mj
+    password: majie123
+    virtual-host: /mj
+    listener:
+      simple:
+        prefetch: 1
+        acknowledge-mode: manual
 
 mybatis-plus:
  # configuration:

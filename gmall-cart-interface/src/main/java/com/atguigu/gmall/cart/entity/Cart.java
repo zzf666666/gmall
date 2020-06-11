@@ -24,4 +24,6 @@ public class Cart {
     private Integer count;
     @TableField("`check`")
     private Boolean check;
+    @TableField(exist = false)
+    private BigDecimal currentPrice;
 }
