@@ -2,6 +2,7 @@ package com.atguigu.gmall.wms.controller;
 
 import java.util.List;
 
+import com.atguigu.gamll.wmsinterface.vo.SkuLockVO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

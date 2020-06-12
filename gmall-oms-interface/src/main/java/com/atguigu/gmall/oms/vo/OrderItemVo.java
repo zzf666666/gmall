@@ -1,4 +1,4 @@
-package com.atguigu.gmall.order.vo;
+package com.atguigu.gmall.oms.vo;
 
 import com.atguigu.gmall.pmsinterface.entity.SkuAttrValueEntity;
 import com.atguigu.gmall.smsinterface.vo.ItemSaleVo;

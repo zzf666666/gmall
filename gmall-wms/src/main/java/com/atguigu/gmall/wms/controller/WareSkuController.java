@@ -2,6 +2,7 @@ package com.atguigu.gmall.wms.controller;
 
 import java.util.List;
 
+import com.atguigu.gamll.wmsinterface.vo.SkuLockVO;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -33,6 +34,12 @@ public class WareSkuController {
 
     @Autowired
     private WareSkuService wareSkuService;
+
+    @PostMapping("check/lock/{orderToken}")
+    public ResponseVo<List<SkuLockVO>> checkAndLock(@RequestBody List<SkuLockVO> orderItems, @PathVariable("orderToken")String orderToken){
+        List<SkuLockVO> orderDesc = wareSkuService.lockWare(orderItems, orderToken);
+        return ResponseVo.ok(orderDesc);
+    }
 
     @GetMapping("/sku/{skuId}")
     public ResponseVo<List<WareSkuEntity>> queryWareBySkuId(@PathVariable Long skuId){

@@ -26,6 +26,7 @@
         <module>gmall-auth</module>
         <module>gmall-ums-interface</module>
         <module>gmall-cart-interface</module>
+        <module>gmall-oms-interface</module>
     </modules>
 
     <properties>
