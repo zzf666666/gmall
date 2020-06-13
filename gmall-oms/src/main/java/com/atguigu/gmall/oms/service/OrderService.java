@@ -19,6 +19,6 @@ public interface OrderService extends IService<OrderEntity> {
 
     PageResultVo queryPage(PageParamVo paramVo);
 
-    void saveOrder(OrderSubmitVo orderSubmitVo);
+    OrderEntity saveOrder(OrderSubmitVo orderSubmitVo);
 }
 

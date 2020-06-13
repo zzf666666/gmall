@@ -37,10 +37,10 @@ public class OrderController {
 
 
     @PostMapping("save/order")
-    public ResponseVo<Object> saveOrder(@RequestBody OrderSubmitVo orderSubmitVo){
+    public ResponseVo<OrderEntity> saveOrder(@RequestBody OrderSubmitVo orderSubmitVo){
 
-        orderService.saveOrder(orderSubmitVo);
-        return ResponseVo.ok();
+        OrderEntity orderEntity = orderService.saveOrder(orderSubmitVo);
+        return ResponseVo.ok(orderEntity);
     }
 
     /**

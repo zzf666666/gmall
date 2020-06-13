@@ -7,9 +7,9 @@
     </select>
 
     <update id="lockWare">
-        UPDATE wms_ware_sku SET stock_locked = stock_locked + #{count} WHERE ware_id=1 AND sku_id = 3;
+        UPDATE wms_ware_sku SET stock_locked = stock_locked + #{count} WHERE ware_id=#{wareId} AND sku_id = #{skuId};
     </update>
     <update id="unLockWare">
-        UPDATE wms_ware_sku SET stock_locked = stock_locked - #{count} WHERE ware_id=1 AND sku_id = 3;
+        UPDATE wms_ware_sku SET stock_locked = stock_locked - #{count} WHERE ware_id=#{wareId} AND sku_id = #{skuId};
     </update>
 </mapper>

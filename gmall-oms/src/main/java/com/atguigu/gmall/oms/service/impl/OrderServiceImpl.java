@@ -61,7 +61,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
     }
 
     @Override
-    public void saveOrder(OrderSubmitVo orderSubmitVo) {
+    public OrderEntity saveOrder(OrderSubmitVo orderSubmitVo) {
         OrderEntity orderEntity = new OrderEntity();
 
         if (CollectionUtils.isEmpty(orderSubmitVo.getItems())) {
@@ -80,8 +80,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
             }
 
             orderEntity.setTotalAmount(orderSubmitVo.getTotalPrice());
-            orderEntity.setPayAmount(orderSubmitVo.getTotalPrice().subtract(new BigDecimal(orderSubmitVo.getBounds() / 100)));
-            orderEntity.setIntegrationAmount(new BigDecimal(orderSubmitVo.getBounds() / 100));
+            Long bounds = orderSubmitVo.getBounds();
+            orderEntity.setPayAmount(orderSubmitVo.getTotalPrice().subtract(bounds != null ? new BigDecimal(bounds/100) : new BigDecimal(0)));
+            orderEntity.setIntegrationAmount(orderSubmitVo.getBounds() != null ? new BigDecimal(orderSubmitVo.getBounds() / 100) : new BigDecimal(0));
             orderEntity.setPayType(orderSubmitVo.getPayType());
             orderEntity.setSourceType(0);
             orderEntity.setStatus(0);
@@ -98,7 +99,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
                 orderEntity.setReceiverAddress(address.getAddress());
             }
             orderEntity.setDeleteStatus(0);
-            orderEntity.setUseIntegration(orderSubmitVo.getBounds().intValue());
+            orderEntity.setUseIntegration(orderSubmitVo.getBounds()!=null ? orderSubmitVo.getBounds().intValue() : 0);
 
         }
 
@@ -165,10 +166,12 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
                 }
             });
 
-            CompletableFuture.allOf(skuAttrValuesCompletableFuture,skuEntity1CompletableFuture, skuEntity2CompletableFuture, skuEntity3CompletableFuture);
+            CompletableFuture.allOf(skuAttrValuesCompletableFuture,skuEntity1CompletableFuture, skuEntity2CompletableFuture, skuEntity3CompletableFuture).join();
+            System.out.println(orderItemEntity);
             orderItemMapper.insert(orderItemEntity);
         });
 
+        return orderEntity;
     }
 
 }

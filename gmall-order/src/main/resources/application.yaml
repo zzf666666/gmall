@@ -37,6 +37,8 @@ spring:
       simple:
         prefetch: 1
         acknowledge-mode: manual
+    publisher-confirm-type: simple
+    publisher-returns: true
 
 threadPool:
   coreSize: 100
