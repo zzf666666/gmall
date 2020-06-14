@@ -197,25 +197,29 @@ public class OrderServiceImpl implements OrderService {
             throw new OrderException("库存锁定失败，锁定状况为: " + skuLockVOList);
         }
 
+        int i =  1/0;
+
         UserInfo userInfo = LoginInterceptor.getUserInfo();
         Integer userId = userInfo.getUserId();
         OrderEntity orderEntity = null;
         try {
             submitVo.setUserId(userId.longValue());
             ResponseVo<OrderEntity> responseVo = omsClient.saveOrder(submitVo);
+
             orderEntity = responseVo.getData();
         } catch (Exception e) {
             e.printStackTrace();
 
+            rabbitTemplate.convertAndSend("ORDER_EXCHANGE", "stock.unlock", orderToken);
             throw new OrderException("订单创建失败");
         }
 
 
-        Map<String,Object> map = new HashMap();
-        map.put("userId", userId.intValue());
-        List<Integer> skuIds = items.stream().map(item -> item.getSkuId().intValue()).collect(Collectors.toList());
-        map.put("sku_ids",skuIds);
-        rabbitTemplate.convertAndSend("ORDER_EXCHANGE", "cart.delete", map);
+//        Map<String,Object> map = new HashMap();
+//        map.put("userId", userId.intValue());
+//        List<Integer> skuIds = items.stream().map(item -> item.getSkuId().intValue()).collect(Collectors.toList());
+//        map.put("sku_ids",skuIds);
+//        rabbitTemplate.convertAndSend("ORDER_EXCHANGE", "cart.delete", map);
 
         return orderEntity;
     }

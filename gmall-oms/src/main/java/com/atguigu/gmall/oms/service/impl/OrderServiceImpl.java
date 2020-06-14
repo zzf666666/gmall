@@ -14,6 +14,7 @@ import com.atguigu.gmall.pmsinterface.entity.*;
 import com.atguigu.gmall.smsinterface.vo.ItemSaleVo;
 import com.atguigu.gmall.umsinterface.entity.UserAddressEntity;
 import com.atguigu.gmall.umsinterface.entity.UserEntity;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -49,6 +50,9 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
 
     @Autowired
     private OrderItemMapper orderItemMapper;
+
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
 
     @Override
     public PageResultVo queryPage(PageParamVo paramVo) {
@@ -171,6 +175,7 @@ public class OrderServiceImpl extends ServiceImpl<OrderMapper, OrderEntity> impl
             orderItemMapper.insert(orderItemEntity);
         });
 
+        rabbitTemplate.convertAndSend("ORDER_EXCHANGE", "order.ttl", orderEntity.getOrderSn());
         return orderEntity;
     }
 

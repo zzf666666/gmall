@@ -45,7 +45,7 @@ spring:
         # 等待子任务完成的时间
         await-termination-period: 90
   rabbitmq:
-    host: 47.105.51.163
+    host: 120.26.179.107
     username: mj
     password: majie123
     virtual-host: /mj

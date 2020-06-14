@@ -29,6 +29,17 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   redis:
     host: 192.168.137.131
+  rabbitmq:
+    host: 120.26.179.107
+    username: mj
+    password: majie123
+    virtual-host: /mj
+    listener:
+      simple:
+        prefetch: 1
+        acknowledge-mode: manual
+    publisher-confirm-type: simple
+    publisher-returns: true
 
 mybatis-plus:
   mapper-locations: classpath:mapper/oms/**/*.xml

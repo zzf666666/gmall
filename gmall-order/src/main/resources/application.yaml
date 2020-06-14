@@ -29,7 +29,7 @@ spring:
     cache: false
 
   rabbitmq:
-    host: 47.105.51.163
+    host: 120.26.179.107
     username: mj
     password: majie123
     virtual-host: /mj
