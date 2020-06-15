@@ -60,6 +60,16 @@ spring:
             - Host=order.gmall.com
           filters:
             - Auth=/
+        - id: payment
+          uri: lb://payment-service
+          predicates:
+            - Host=payment.gmall.com
+          filters:
+            - Auth=/
+        - id: payment2
+          uri: lb://payment-service
+          predicates:
+            - Path=/pay/**
 
 auth:
   jwt:

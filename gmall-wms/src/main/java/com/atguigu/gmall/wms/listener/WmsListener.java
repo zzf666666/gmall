@@ -79,4 +79,32 @@ public class WmsListener {
       }
 
     }
+
+    @RabbitListener(bindings = @QueueBinding(
+            value = @Queue(value = "STOCK_MINUS_QUEUE", durable = "true"),
+            exchange = @Exchange(value = "ORDER_EXCHANGE", ignoreDeclarationExceptions = "true", type = ExchangeTypes.TOPIC),
+            key = {"store.minus"}
+    ))
+    public void storeMinus(String orderToken, Channel channel, Message message) throws IOException {
+        String itemJson = redisTemplate.opsForValue().get(PAY_PREFIX + orderToken);
+
+        try {
+            if(StringUtils.isNotBlank(itemJson)){
+                List<SkuLockVO> skuLockVOS = JSON.parseArray(itemJson, SkuLockVO.class);
+                skuLockVOS.forEach(item -> {
+                    wareSkuMapper.minus(item.getWareId(),item.getSkuId(),item.getCount());
+                });
+                redisTemplate.delete(PAY_PREFIX + orderToken);
+            }
+
+            channel.basicAck(message.getMessageProperties().getDeliveryTag(), false);
+        } catch (IOException e) {
+            e.printStackTrace();
+            if(message.getMessageProperties().getRedelivered()){
+                channel.basicReject(message.getMessageProperties().getDeliveryTag(), false);
+            }else{
+                channel.basicNack(message.getMessageProperties().getDeliveryTag(), false, true);
+            }
+        }
+    }
 }

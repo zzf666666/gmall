@@ -197,7 +197,7 @@ public class OrderServiceImpl implements OrderService {
             throw new OrderException("库存锁定失败，锁定状况为: " + skuLockVOList);
         }
 
-        int i =  1/0;
+//        int i =  1/0;
 
         UserInfo userInfo = LoginInterceptor.getUserInfo();
         Integer userId = userInfo.getUserId();
